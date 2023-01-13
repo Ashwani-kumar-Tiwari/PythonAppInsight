@@ -1,0 +1,3 @@
+Flask==2.0.2
+opencensus-ext-azure
+opencensus-ext-logging

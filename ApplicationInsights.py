@@ -10,12 +10,12 @@ config_integration.trace_integrations(['logging'])
 
 logger = logging.getLogger(__name__)
 
-handler = AzureLogHandler(connection_string='InstrumentationKey=4497e9b3-381f-4070-9cb6-7dd666ca6ec4;IngestionEndpoint=https://centralus-0.in.applicationinsights.azure.com/;LiveEndpoint=https://centralus.livediagnostics.monitor.azure.com/')
+handler = AzureLogHandler(connection_string='InstrumentationKey=580014a9-da36-4a6e-b9fd-b6e2744333fe;IngestionEndpoint=https://northeurope-2.in.applicationinsights.azure.com/;LiveEndpoint=https://northeurope.livediagnostics.monitor.azure.com/')
 handler.setFormatter(logging.Formatter('%(asctime)s %(traceId)s %(spanId)s %(message)s'))
 logger.addHandler(handler)
 
 tracer = Tracer(
-    exporter=AzureExporter(connection_string='InstrumentationKey=4497e9b3-381f-4070-9cb6-7dd666ca6ec4;IngestionEndpoint=https://centralus-0.in.applicationinsights.azure.com/;LiveEndpoint=https://centralus.livediagnostics.monitor.azure.com/'),
+    exporter=AzureExporter(connection_string='InstrumentationKey=580014a9-da36-4a6e-b9fd-b6e2744333fe;IngestionEndpoint=https://northeurope-2.in.applicationinsights.azure.com/;LiveEndpoint=https://northeurope.livediagnostics.monitor.azure.com/'),
     sampler=ProbabilitySampler(1.0)
 )
 
